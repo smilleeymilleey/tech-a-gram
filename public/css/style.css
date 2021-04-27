@@ -23,7 +23,7 @@ header, .project:not(:last-child) {
 }
 
 
-.grid-row {
+.grid {
   border: 2px solid hotpink;
   background-color: pink;
   text-align: center;
