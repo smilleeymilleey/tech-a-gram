@@ -20,12 +20,16 @@ async function getImgurUrl(){
     .then(function (response) {
       return response.json()
     })
-    .then(function (images) {
-      console.log(images.data[0].link)
-      
+    .then(function ({data: images}) {
+      console.log(images[0].link)
+
+     for (let i= 0; i < images.length; i++) {
+         const allImages = images[i].link;   
+         console.log(allImages)
+     }
     })
 
-    // for loop to print out all links 
+    
 }
 
 
