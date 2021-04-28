@@ -1,31 +1,71 @@
-<div class="row">
+{{!-- <div class="row">
   <div class="col-auto">
     <h2>Welcome, {{name}}!</h2>
   </div>
-</div>
+</div> --}}
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Project:</h3>
 
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
+  
+  <div class="row">
+    <div class="description col s12">ADD PIC HERE</div>
+      <div class="name col s12">{{name}}</div>  
+      <div class="bio col s12">This is my bio</div>  
+    </div>
+
+   
+  {{!-- grid  --}}
+
+  <div class="grid-row row">
+      <div class="col s4">
+        <h1>test</h1>
       </div>
-      <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+      <div class="col s4">
+        <h1>test</h1>
       </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+      <div class="col s4">
+        <h1>test</h1>
+    </div>
+
+    <div class="grid-row row">
+        <div class="col s4">
+          <h1>test</h1>
+        </div>
+        <div class="col s4">
+          <h1>test</h1>
+        </div>
+        <div class="col s4">
+          <h1>test</h1>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+    <div class="grid-row row">
+        <div class="col s4">
+          <h1>test</h1>
+        </div>
+        <div class="col s4">
+          <h1>test</h1>
+        </div>
+        <div class="col s4">
+          <h1>test</h1>
       </div>
-    </form>
+    </div>
+
+   
   </div>
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   {{#if projects.length}}
   <div class="col-md-6 project-list">
