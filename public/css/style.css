@@ -1,6 +1,14 @@
 /* * {
   border: 2px solid blue;
 } */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #eee;
+}
 
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
@@ -22,7 +30,33 @@ header, .project:not(:last-child) {
   text-align: center;
 }
 
+.no-button {
+  position: relative;
+  left: 50px;
+}
+#header{
+  font-family: 'Sacramento', cursive;
+  text-align: center;
+}
 
+.btn {
+  width: 100%;
+  background-color: #3897f0;
+  border: 1px solid #3897f0;
+  padding: 5px 12px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.input1, .input2{
+  width: 100%;
+  padding: 5px 12px;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
 .grid-row {
   border: 2px solid hotpink;
   background-color: pink;
@@ -32,27 +66,17 @@ header, .project:not(:last-child) {
   
 }
 
-
+#image-sizing{
+  border: 1px solid gray;
+  box-shadow: 3px 3px 2px 1px gray;
+  width: 200px; height: 200px;
+  position: relative;
+  left: 50%;
+  
+}
+.image-text{
+  text-align: center;
+}
 .pink-border {
   border: 2px solid hotpink;
 }
-/* .no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
-}
-
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-} */
