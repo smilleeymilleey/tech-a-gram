@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, User } = require('../models');
 const withAuth = require('../utils/auth');
+const  getImgurUrl  = require('../controllers/imgur/api.js')
 
 router.get('/', async (req, res) => {
   try {
@@ -63,12 +64,16 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
+    const images = await getImgurUrl()
+
 
     res.render('profile', {
       ...user,
+      images,
       logged_in: true
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });

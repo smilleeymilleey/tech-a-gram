@@ -20,7 +20,7 @@
 
   <div class="grid-row row">
       <div class="col s4">
-        <h1>test</h1>
+        <h1 id="test"></h1>
       </div>
       <div class="col s4">
         <h1>test</h1>
@@ -54,25 +54,21 @@
 
    
   </div>
-    
- 
 
-
-
-
-
-
-
-
-
-
-
-
-
+    {{#each images as |image|}}
+    <div class="row mb-2">
+     {{image.link}}
+    </div>
+    {{/each}}
 
   {{#if projects.length}}
   <div class="col-md-6 project-list">
     <h3>Current Projects:</h3>
+
+
+ 
+
+
 
     {{#each projects as |project|}}
     <div class="row mb-2">
@@ -89,3 +85,4 @@
 </div>
 
 <script src="./js/profile.js"></script>
+<script src="./imgur/api.js"></script>
