@@ -32,13 +32,13 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/posts/:id', async (req, res) => {
+router.get('/Post/:id', async (req, res) => {
   try {
     const PostData = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['description'],
+          attributes: ['name'],
         },
       ],
     });
@@ -64,9 +64,9 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    const images = await getImgurUrl()
+    const {data:images} = await getImgurUrl()
 
-
+    console.log(images);
     res.render('profile', {
       ...user,
       images,
