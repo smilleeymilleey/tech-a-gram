@@ -19,22 +19,22 @@ const fetch = require("node-fetch");
       .then(function (response) {
         return response.json()
       })
-      .then(function ({data: images}) {
-        console.log(images)
-        // return images
-        // goal: get one image from the api at a time based on number of clicks on the button. 
+      // .then(function ({data: images}) {
+      //   return
+      //   // return images
+      //   // goal: get one image from the api at a time based on number of clicks on the button. 
 
-        // display 5 images from api 
-        // click on a image to select --> post it 
-        // once the image is posted it can be updated with text/a comment it gets posted to profile page 
+      //   // display 5 images from api 
+      //   // click on a image to select --> post it 
+      //   // once the image is posted it can be updated with text/a comment it gets posted to profile page 
 
 
-        // for (let i= 0; i < 6; i++) {
-        //   const allImages = images[i].link;   
-        //   console.log(allImages)
-        //   return images 
-        // }
-      })  
+      //   // for (let i= 0; i < 6; i++) {
+      //   //   const allImages = images[i].link;   
+      //   //   console.log(allImages)
+      //   //   return images 
+      //   // }
+      // })  
      }
  
 
