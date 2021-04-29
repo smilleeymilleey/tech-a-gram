@@ -20,7 +20,11 @@
 
   <div class="grid-row row">
       <div class="col s4">
-        <h1>test</h1>
+        {{#each images as |image|}}
+          <div class="row mb-2">
+          <img src="{{image.link}}"></img>
+          </div>
+       {{/each}}
       </div>
       <div class="col s4">
         <h1>test</h1>
@@ -55,9 +59,22 @@
    
   </div>
 
+
+    {{#each images as |image|}}
+    <div class="row mb-2">
+     <img src="{{image.link}}"></img>
+    </div>
+    {{/each}}
+
   {{#if projects.length}}
   <div class="col-md-6 project-list">
     <h3>Current Projects:</h3>
+
+
+ 
+
+
+
 
     {{#each projects as |project|}}
     <div class="row mb-2">
@@ -74,3 +91,4 @@
 </div>
 
 <script src="./js/profile.js"></script>
+<script src="./imgur/api.js"></script>
