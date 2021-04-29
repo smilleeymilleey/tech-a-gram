@@ -10,7 +10,8 @@ body {
   background-color: #eee;
 }
 
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -33,9 +34,13 @@ header, .project:not(:last-child) {
 .no-button {
   position: relative;
   left: 50px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
-#header{
-  font-family: 'Sacramento', cursive;
+#header {
+  font-family: "Sacramento", cursive;
   text-align: center;
 }
 
@@ -49,7 +54,8 @@ header, .project:not(:last-child) {
   cursor: pointer;
   border-radius: 5px;
 }
-.input1, .input2{
+.input1,
+.input2 {
   width: 100%;
   padding: 5px 12px;
   border-radius: 3px;
@@ -62,19 +68,19 @@ header, .project:not(:last-child) {
   background-color: pink;
   text-align: center;
   clear: both;
-  height: 20; overflow: hidden;
-  
+  height: 20;
+  overflow: hidden;
 }
 
-#image-sizing{
+#image-sizing {
   border: 1px solid gray;
   box-shadow: 3px 3px 2px 1px gray;
-  width: 200px; height: 200px;
+  width: 200px;
+  height: 200px;
   position: relative;
   left: 50%;
-  
 }
-.image-text{
+.image-text {
   text-align: center;
 }
 .pink-border {
