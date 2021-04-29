@@ -32,13 +32,13 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/posts/:id', async (req, res) => {
+router.get('/Post/:id', async (req, res) => {
   try {
     const PostData = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['description'],
+          attributes: ['name'],
         },
       ],
     });
