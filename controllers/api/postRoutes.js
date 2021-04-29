@@ -1,10 +1,37 @@
 const router = require('express').Router();
-const {Posts } = require('../../models');
+const {Post } = require('../../models');
 const withAuth = require('../../utils/auth');
+
+//get post
+router.get('/posts/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      where: [
+        {
+          model: User,
+          attributes: ["description"]
+        },
+      ],
+    });
+
+    const post = postData.get({ plain: true });
+
+    res.render('profile', {
+      
+      ...post,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newPosts = await Posts.create({
+    console.log(req.session.user_id)
+    const newPosts = await Post.create({
+      
       ...req.body,
       user_id: req.session.user_id,
     });
@@ -17,7 +44,7 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const PostsData = await Posts.destroy({
+    const PostsData = await Post.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
