@@ -14,17 +14,13 @@ Post.init(
 
     imageUrl:{
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     
     description: {
       type: DataTypes.STRING,
     },
-    date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
+  
   
     user_id: {
       type: DataTypes.INTEGER,
@@ -36,7 +32,7 @@ Post.init(
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'Post',
