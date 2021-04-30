@@ -7,11 +7,14 @@
 
 
 <div class="row">
-  <div class="description col s12">Welcome Back, {{name}}!</div>
-  <div class="bio col s12">Create </div>
+  <div class="name col s12">
+    <h4>Good to see you again, {{name}}</h4>
+  </div>
+  <div class="description col s12">
+    <h5>Create your new post here</h5>
+  </div>
+  {{!-- <div class="bio col s12">This is my bio</div> --}}
 </div>
-
-
 
 {{!-- grid --}}
 
@@ -19,15 +22,15 @@
   <div class="col s4">
     {{#each images as |image|}}
     <div class="row mb-2">
-      <img src="{{image.link}}"></img>
+      <img class="z-depth-3" id="image-sizing" src="{{image.link}}"></img>
     </div>
     {{/each}}
   </div>
   <div class="col s4">
-    <h1>test</h1>
+    <h1></h1>
   </div>
   <div class="col s4">
-    <h1>test</h1>
+    <h1></h1>
   </div>
 
 
