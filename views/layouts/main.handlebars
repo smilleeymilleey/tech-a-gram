@@ -15,20 +15,32 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+   <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Tech-a-gram</a>
 
-      <h3 id="logo">
-        <a href="/" id="header">Tech-A-Gram</a>
-      </h3>
+      <ul id="nav-mobile" class="right hide-on-med-and-down"> 
+        {{#if logged_in}}
+        <li>
+            <a "#logout" class="no-button" id="logout">Logout</a>
+        </li>
+        <li>
+          <a href="/profile" class="no-button" id="create">Create post</a>
+        </li>
+      
+        {{else}}
+        <li>
+          <a href="/login" class="no-button" id="login">login</a>
+        </li>
+        {{/if}}
 
-      {{#if logged_in}}
-      <a href="/profile" class="no-button header_pos">Create post</a>
-      <a class="no-button header_pos" id="logout">Logout</a>
+        {{!-- <li><a href="collapsible.html">Logout</a></li> --}}
+      </ul>
+    </div>
+  </nav>
 
-      {{else}}
-      <a href="/login" class="no-button">login</a>
-      {{/if}}
+
+    
 
     </header>
 

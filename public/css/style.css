@@ -5,6 +5,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+
 }
 
 body {
@@ -20,8 +21,11 @@ header {
   margin-bottom: 50px;
 }
 
-#header {
+
+.nav-extended {
   font-family: "Sacramento", cursive;
+  font-size: 20%;
+  background-color: #CCCCFF
 }
 
 .header_pos {
@@ -61,11 +65,7 @@ h3 {
   background-color: white;
   text-align: center;
 }
-/* .bio {
-  margin-bottom: 0;
-  background-color: orange;
-  text-align: center;
-} */
+
 
 .btn {
   width: 100%;
@@ -102,13 +102,19 @@ h3 {
   overflow: hidden;
 }
 
+.container {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
 #image-sizing {
   position: relative;
   border: none;
   /* box-shadow: 3px 3px 2px 1px gray; */
   width: 500px;
-  height: 500px;
-  left: 90%;
+  height: 500px; 
+
 }
 .image-text {
   text-align: center;
@@ -118,6 +124,19 @@ h3 {
   padding-bottom: 75px;
 }
 
-/* .pink-border {
-  border: 2px solid hotpink;
-} */
+
+.brand-logo {
+  font-size: 40px !important;
+}
+
+#logout {
+  font-size: 40px !important;
+}
+#login {
+  font-size: 40px !important;
+  color: white;
+}
+#create {
+  font-size: 40px !important;
+  color: white;
+}
