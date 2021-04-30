@@ -58,8 +58,8 @@ header, .project:not(:last-child) {
   border-radius: 3px;
 }
 .grid-row {
-  border: 2px solid hotpink;
-  background-color: pink;
+  border: 2px solid grey;
+  background-color: lightgray;
   text-align: center;
   clear: both;
   height: 20; overflow: hidden;

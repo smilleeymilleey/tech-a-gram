@@ -43,7 +43,32 @@ const delButtonHandler = async (event) => {
 //   .addEventListener('submit', newFormHandler);
  
 
-document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+// document
+//   .querySelector('.project-list')
+//   .addEventListener('click', delButtonHandler);
 
+document 
+.querySelector('.s4')
+.addEventListener('click', async function(event){
+  let test = "testing"
+  console.log(event.target)
+  
+if (event.target.matches('img')){
+  console.log('img clicked')
+  const response = await fetch(`/api/users/image`, {
+    method: 'POST',
+    body: JSON.stringify({ image:event.target.src }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  if (response.ok) {
+    document.location.replace('/');
+  } else {
+    alert('Failed to create project');
+  }
+
+
+}
+})
