@@ -64,9 +64,9 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-    const {data:images} = await getImgurUrl()
+    const {data:images} = await getImgurUrl() 
 
-    console.log(images);
+    // console.log(images);
     res.render('profile', {
       ...user,
       images,

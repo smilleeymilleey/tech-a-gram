@@ -24,9 +24,11 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile" class="no-button">Edit</a> 
-        <button class="btn" id="logout">Logout</button>
-        
+     
+        <a href="/profile" class="no-button">Create Post</a>
+        <a class="no-button" href="/logout" id="logout">Logout</a>
+    
+    
         {{else}}
         <a href="/login">login</a>
         {{/if}}
